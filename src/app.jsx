@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import styles from './app.module.css';
+import Video_detail from './components/video_detail/video_detail';
 import Video_list from './components/video_list/video_list';
 import Video_search from './components/video_search_header/video_search_header';
 
 function App({youtube}) {
   const [videos, setvideos] = useState([]);
+  const [selectedVideo, setselectedVideo] = useState(null);
   const search = query => {
 
     youtube
@@ -31,6 +33,10 @@ function App({youtube}) {
    .mostPupular()
    .then(videos => setvideos(videos))
   },[]);
+  
+  const selectvideo = (video) => {
+  setselectedVideo(video);
+  }
 
    // const requestOptions = {
     //   method: 'GET',
@@ -63,7 +69,8 @@ function App({youtube}) {
   return (
   <div className={styles.app}>
   <Video_search onSearch={search} />
-    <Video_list videos={videos}/>
+  {selectedVideo && <Video_detail videoo={selectedVideo}/>}
+  <Video_list videos={videos} onVideoClick = {selectvideo} />
   </div>
   
   )
