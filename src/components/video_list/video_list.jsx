@@ -16,4 +16,4 @@ const Video_list = ({ videos, onVideoClick, display }) => (
 export default Video_list;
 
 
-//control + b = 리스트창 여닫기. 
+//control + b = 파일리스트 여닫기. 

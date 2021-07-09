@@ -11,6 +11,7 @@ const Video_detail = ({ videoo }) => (
             height="500px"
             src={`https://www.youtube.com/embed/${videoo.id}`}
             frameBorder="0"
+            title="youtube video player"
             allowFullscreen
         >
         </iframe>
