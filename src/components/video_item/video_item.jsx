@@ -7,13 +7,13 @@ const Video_item = memo(
         return (
             <li className={`${styles.container} ${displayType}`} onClick=
                 {() => onVideoClick(videoo)}>
-                <div className={styles.video}>
-                    <img className={styles.thumbnail} src={snippet.thumbnails.medium.url}
+                <div className={`${styles.video} ${displayType}`}>
+                    <img className={`${styles.thumbnail} ${displayType}`} src={snippet.thumbnails.medium.url}
                         art="Video thumbnail"
                     />
-                    <div className={styles.metadata}>
-                        <p className={styles.title}>{snippet.title}</p>
-                        <p className={styles.channel}>{snippet.channelTitle}</p>
+                    <div className={`${styles.metadata} ${displayType}`}>
+                        <p className={`${styles.title} ${displayType}`}>{snippet.title}</p>
+                        <p className={`${styles.channel} ${displayType}`}>{snippet.channelTitle}</p>
                     </div>
                 </div>
 

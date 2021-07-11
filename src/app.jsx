@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import styles from './app.module.css';
+import Navbar from './components/navbar/navbar';
 import Video_detail from './components/video_detail/video_detail';
 import Video_list from './components/video_list/video_list';
 import Video_search from './components/video_search_header/video_search_header';
@@ -7,6 +8,7 @@ import Video_search from './components/video_search_header/video_search_header';
 function App({ youtube }) {
   const [videos, setvideos] = useState([]);
   const [selectedVideo, setselectedVideo] = useState(null);
+
 
   const search = useCallback(
     query => {
@@ -44,6 +46,7 @@ function App({ youtube }) {
   }
 
 
+
   // const requestOptions = {
   //   method: 'GET',
   //   redirect: 'follow'
@@ -72,6 +75,8 @@ function App({ youtube }) {
 
   // })
 
+
+
   return (
     <div className={styles.app}>
       <Video_search onSearch={search} />
@@ -83,6 +88,10 @@ function App({ youtube }) {
 
         )}
         <div className={styles.list}>
+          {!selectedVideo && (
+            <nav className={styles.navbarwrap}><Navbar />
+            </nav>
+          )}
           <Video_list
             videos={videos}
             onVideoClick={selectvideo}

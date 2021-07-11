@@ -1,0 +1,49 @@
+.navbarwrap{
+    width: 20em;
+    /* height: 100em; */
+    color: #E4E4E4;
+}
+
+.contwrap{
+    border-bottom: 1px solid darkgray;
+    display: flex;
+    flex-direction: column;
+    width: 20em;
+    margin-top: 1.3em;
+}
+/* .navbarwrap.list {
+   width: 20em;
+}
+
+.navbarwrap.grid{
+    width: 20em;
+
+} */
+/* <i class="fas fa-home"></i> */
+
+
+.navcont{
+    padding-bottom: 0.65em;
+    padding-left: 1em;
+    font-size: 1.2em;
+    width: 100%;
+    cursor: pointer;
+}
+.navcont:hover{
+    background-color: black;
+}
+.navtext{
+    display: inline;
+    font-size: 13px;
+    margin-left: 1em;
+}
+
+p{
+    color: white;
+}
+
+
+.navcont:last-child{
+    margin-bottom: 1.85em;
+
+}

@@ -1,7 +1,14 @@
 .detail{
     padding: 0.2em;
+    color:#E4E4E4;
+    display: flex;
+    flex-direction: column;
+    margin-left: 19em;
+    margin-right: 1.5em;
+
 }
 
 .description{
     white-space: pre-wrap;
+    color:#E4E4E4;
 }

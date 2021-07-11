@@ -19,11 +19,11 @@ const Video_search = memo(
             <header className={styles.header}>
                 <div className={styles.logo}>
                     <img className={styles.img} src="/images/logo.png" alt="logo" />
-                    <h1 className={styles.title}>Youtube-Top25</h1>
+                    <h1 className={styles.title}> Youtube</h1>
                 </div>
-                <input className={styles.input} type="search" placeholder="Search...." onKeyPress={onKeyPress} ref={inputRef} />
+                <input className={styles.input} type="search" placeholder="검색" onKeyPress={onKeyPress} ref={inputRef} />
                 <button className={styles.button} type="submit" onClick={onClick} >
-                    <img className={styles.buttonimg} src="imges/search.png" alt="search" />
+                    <img className={styles.buttonimg} src="images/search.png" alt="search" />
                 </button>
             </header>
 
